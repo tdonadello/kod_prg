@@ -1,0 +1,77 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: #181818;
+            }
+            .wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                min-height: 100vh;
+                gap: 150px;
+            }
+
+            .nadpis {
+                color: #eee;
+                font-family: roboto;
+                text-align: end;
+            }
+
+            .nadpis::after {
+                content: "";
+                width: 70px;
+                aspect-ratio: 1/1;
+                background-color: aqua;
+                position: absolute;
+                left: 50%;
+                translate: -50% 0;
+                z-index: -1;
+                filter: blur(25px);
+                animation: text-breathe 1s linear infinite alternate;
+            }
+
+            @keyframes text-breathe {
+                100% {
+                    filter: blur(100px);
+                }
+            }
+            .card {
+                background-color: #181818;
+                height: 300px;
+                width: 200px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 40px 40px;
+                color: #eee;
+                /* výška mezi řádky */
+                line-height: 1.3;
+                box-sizing: border-box;
+                /* x, y, rozmazání, barva */
+                box-shadow: 0px 0px 100px aqua;
+                animation: breathing 2s linear infinite alternate;
+            }
+
+            @keyframes breathing {
+                100% {
+                    box-shadow: 0 0 50px aqua;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1 class="nadpis">Nějaká náhodná věta s více slovy</h1>
+            <div class="card">
+                Další text, smutníme nad nedostatkem kreativity
+            </div>
+        </div>
+    </body>
+</html>

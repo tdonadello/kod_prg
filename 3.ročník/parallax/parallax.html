@@ -1,0 +1,223 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Údolí jednorožců</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+            * {
+                margin: 0;
+            }
+
+            .parallax {
+                position: relative;
+                min-height: 100vh;
+                z-index: -5;
+                overflow: hidden;
+            }
+
+            .parallax img {
+                position: absolute;
+                width: 100%;
+            }
+
+            .clouds_1,
+            .clouds_2 {
+                animation: slide-sideways linear;
+                animation-timeline: scroll(root);
+            }
+
+            .rocks,
+            .ground,
+            .sky,
+            .heading {
+                animation: slide-down linear;
+                animation-timeline: scroll(root);
+            }
+
+            .clouds_1 {
+                z-index: 3;
+                --slide-speed: -10;
+            }
+
+            .clouds_2 {
+                z-index: 6;
+                --slide-speed: 10;
+            }
+
+            .ground {
+                z-index: 5;
+                --slide-speed: 1;
+            }
+
+            .rocks {
+                z-index: 4;
+                --slide-speed: 30;
+            }
+
+            .sky {
+                z-index: 2;
+                --slide-speed: 1;
+            }
+
+            .heading {
+                z-index: 7;
+                position: absolute;
+                color: white;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 20%;
+                font-size: 6rem;
+                --slide-speed: 32;
+                font-family: "Dancing Script";
+            }
+
+            section p {
+                width: 75ch;
+                text-align: justify;
+                margin-inline: auto;
+                color: white;
+                font-family: "Dancing Script";
+            }
+
+            section {
+                padding-top: 150px;
+                z-index: 10;
+                background-image: linear-gradient(#064f7d, #0177b2, #9186a1);
+            }
+
+            @keyframes slide-down {
+                100% {
+                    /* calc() kalkulačka var(--nazev-proměnné) krát 30px; první hodnota pro osu x(O), druhá pro osu y(calc(var(--slide-speed) * 30px)) */
+                    translate: 0 calc(var(--slide-speed) * 30px);
+                }
+            }
+
+            @keyframes slide-sideways {
+                100% {
+                    translate: calc(var(--slide-speed) * 100px) 0;
+                }
+            }
+
+            .firefly {
+                height: 15px;
+                aspect-ratio: 1/1;
+                z-index: 99;
+                position: absolute;
+                translate: -50% -50%;
+                border-radius: 50%;
+                background-color: #fff3a1;
+                filter: blur(2px);
+                transition: 0.5s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="firefly"></div>
+        <div class="parallax">
+            <img class="clouds_1" src="layers/clouds_1.png" alt="" />
+            <img class="clouds_2" src="layers/clouds_2.png" alt="" />
+            <img class="ground" src="layers/ground.png" alt="" />
+            <img class="rocks" src="layers/rocks.png" alt="" />
+            <img class="sky" src="layers/sky.png" alt="" />
+            <h1 class="heading">Hello there!</h1>
+        </div>
+        <section>
+            <p>
+                Once upon a time, nestled deep within the heart of a towering
+                mountain range, there lay a hidden gem known as the Enchanted
+                Mountain Lake. This mystical lake, shrouded in mystery and
+                enchantment, was unlike any other body of water in the world.
+                During the day, it appeared as a tranquil, crystal-clear lake,
+                reflecting the majestic peaks that surrounded it.
+            </p>
+            <p>
+                However, as soon as the sun dipped below the horizon and the
+                stars began to twinkle in the night sky, the Enchanted Mountain
+                Lake came to life. It was said that the lake was home to a host
+                of magical creatures that only revealed themselves under the
+                cover of darkness.
+            </p>
+            <p>
+                One moonlit night, a young adventurer named Elara ventured into
+                the mountains, drawn by the tales of the Enchanted Mountain
+                Lake. She hiked through dense forests, climbed steep cliffs, and
+                crossed rushing streams until she finally stood before the
+                shimmering waters of the mystical lake. As the moon cast its
+                silvery glow upon the lake's surface, Elara watched in wonder as
+                the magic unfolded.
+            </p>
+            <p>
+                Gentle ripples spread across the water, and from its depths
+                emerged a graceful water nymph, her hair flowing like liquid
+                silver. She danced upon the lake's surface, leaving a trail of
+                sparkling droplets in her wake. Elara couldn't help but be
+                mesmerized by the nymph's elegant movements and the ethereal
+                music that filled the air.
+            </p>
+            <p>
+                Nearby, a family of fireflies gathered, their tiny bodies aglow
+                with a warm, golden light. They flitted about, forming intricate
+                patterns in the night sky, illuminating the lake's surroundings
+                with their enchanting display. Elara marveled at the fireflies'
+                synchronized dance, feeling a sense of peace and wonder she had
+                never known before.
+            </p>
+            <p>
+                As the night wore on, a gentle breeze rustled through the trees,
+                and the leaves seemed to whisper secrets to one another. The
+                very air was filled with enchantment, and Elara felt like she
+                had stepped into a world of dreams.
+            </p>
+            <p>
+                Just before dawn, as the first light of morning began to touch
+                the mountaintops, the magical creatures of the Enchanted
+                Mountain Lake retreated to their hidden homes within the depths
+                of the lake. The water nymph's graceful dance came to an end,
+                the fireflies' lights dimmed, and the whispers of the forest
+                faded away.
+            </p>
+            <p>
+                Elara watched in awe as the lake returned to its serene daytime
+                appearance, its secrets once again concealed beneath the
+                surface. With a heart full of wonder and gratitude, she knew she
+                had experienced something truly magical that night.
+            </p>
+            <p>
+                From that day forward, Elara became the keeper of the Enchanted
+                Mountain Lake's secret. She visited often, sharing her stories
+                with those who were willing to believe in the magic of the
+                mountains. And so, the legend of the Enchanted Mountain Lake
+                lived on, a testament to the wonders that could be found in the
+                most unexpected places, under the cover of a starry night in the
+                heart of the mountains.
+            </p>
+        </section>
+        <script>
+            const firefly = document.querySelector(".firefly")
+
+            let mouseX = 0
+            let mouseY = 0
+
+            document.addEventListener("mousemove", function (event) {
+                mouseX = event.clientX
+                mouseY = event.clientY
+
+                litejSvetlusko()
+            })
+
+            window.addEventListener("scroll", function () {
+                litejSvetlusko()
+            })
+
+            function litejSvetlusko() {
+                let scrollX = window.pageXOffset
+                let scrollY = window.pageYOffset
+
+                firefly.style.top = mouseY + scrollY + "px"
+                firefly.style.left = mouseX + scrollX + "px"
+            }
+        </script>
+    </body>
+</html>

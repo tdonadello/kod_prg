@@ -1,0 +1,60 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://api.mapy.cz/loader.js"></script>
+        <script>
+            Loader.load()
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="logo.png" class="logo" alt="logo" />
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about-us"> O NÁS </a></li>
+                    <li><a href="#menu"> MENU </a></li>
+                    <li><a href="#contacts"> KONTAKTY</a></li>
+                </ul>
+            </nav>
+            <h1 class="main-header">PIZZA MŇAM</h1>
+            <div class="subheading">
+                <h2>Nejlepší kouzelná pizza na SVĚTĚ</h2>
+                <a href="">objednej rozvoz</a>
+                <a href="">MENU</a>
+            </div>
+        </header>
+
+        <section class="section-about-us">
+            <h2 id="about-us" class="section-header">O NÁS</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                doloremque autem modi qui natus obcaecati fugiat iure
+                necessitatibus ut! Rem mollitia accusantium accusamus cumque
+                facilis consectetur enim exercitationem neque ipsam voluptates,
+                nisi debitis iste nemo at dignissimos ex. Excepturi doloremque
+                harum in assumenda, necessitatibus ea tenetur soluta at corporis
+                repellat molestiae maxime consequatur blanditiis. Ea ab
+                cupiditate nemo excepturi voluptatum facere exercitationem rem
+                ex adipisci. Sit libero, atque dolorem quibusdam modi nisi rem
+                expedita, aut, cum consequuntur earum tempora ea vel nemo eum
+                eligendi unde nam corrupti incidunt aspernatur laudantium
+                eveniet mollitia molestiae sapiente. Fuga expedita soluta quae
+                commodi reiciendis?
+            </p>
+        </section>
+
+        <footer>
+            <div id="mapa" style="width: 600px; height: 400px"></div>
+            <script type="text/javascript">
+                var stred = SMap.Coords.fromWGS84(14.41, 50.08)
+                var mapa = new SMap(JAK.gel("mapa"), stred, 10)
+                mapa.addDefaultLayer(SMap.DEF_BASE).enable()
+                mapa.addDefaultControls()
+            </script>
+        </footer>
+    </body>
+</html>

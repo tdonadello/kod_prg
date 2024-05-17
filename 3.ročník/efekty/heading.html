@@ -1,0 +1,43 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: #181818;
+            }
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            h1 {
+                /* 1 rem = 16px */
+                font-size: 5rem;
+                color: transparent;
+                -webkit-text-stroke: 1px white;
+                background: url("pozadinadpisu.png");
+                background-position: 0 0;
+                -webkit-background-clip: text;
+                background-clip: text;
+                animation: text 15s linear infinite;
+                font-family: roboto;
+                font-weight: 400;
+            }
+
+            @keyframes text {
+                100% {
+                    background-position: 1000px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Dobrý den géčko</h1>
+        </div>
+    </body>
+</html>

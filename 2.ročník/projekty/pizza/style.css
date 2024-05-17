@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Secular+One&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Secular One', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 100vh;
+    width: 100vw;  
+    background-image: url("pizza-g549017d3d_1920.jpg");
+    background-size: cover;
+}
+.logo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 8%;
+    top: 2%;
+}
+.nav {
+    font-size: 1.3em;
+    text-align: center;
+   
+}
+.nav li{
+    display: inline-block;
+    font-weight:bold ;
+    padding: 0 5%;
+    margin-top: 2%;
+}
+
+.nav a {
+    text-decoration: none;
+    color:white;
+}
+.main-header {
+    font-size: 7.5vw;
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 8%; 
+    top: 30%;
+    text-shadow: 0 0 10px black;
+}
+.subheading{
+    color: white;
+    position: absolute;
+    bottom: 18%;
+    left: 8%;
+    padding: 10px;
+    margin: 10px;
+}
+.subheading a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin-right: 10px;
+}
+section {
+    margin: 0 20vw;
+}
+section p {
+    text-align: justify;
+}
+footer {
+    display: flex;
+    justify-content: center;
+}

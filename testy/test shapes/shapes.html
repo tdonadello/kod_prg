@@ -1,0 +1,114 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test</title>
+        <style>
+            body {
+                font-family: monospace;
+                font-size: 32px;
+            }
+
+            .obsah {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+            .tlacitko {
+                padding: 10px;
+                font-size: 20px;
+                margin: 10px;
+            }
+
+            .platno {
+                border: 2px solid black;
+                width: 800px;
+                height: 500px;
+                margin: auto;
+            }
+
+            .ctverec {
+                height: 75px;
+                width: 75px;
+                background-color: orange;
+                border: 1px solid red;
+            }
+
+            .kolecko {
+                height: 75px;
+                width: 75px;
+                border-radius: 150px;
+                background-color: lightblue;
+                border: 1px solid blue;
+            }
+
+            .text-box {
+                height: 75px;
+                width: auto;
+            }
+
+            .obrazek {
+                width: 50px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="obsah" id="obsah">
+            <h1>Picasso</h1>
+            <div class="platno"></div>
+            <div><button id="tlacitkoText" class="tlacitko">Text</button></div>
+            <div>
+                <button id="tlacitkoKolecka" class="tlacitko">Kolečka</button>
+            </div>
+            <div>
+                <button id="tlacitkoCtverce" class="tlacitko">Čtverečky</button>
+            </div>
+
+            <div class="ctverec"></div>
+            <div class="kolecko"></div>
+            <div class="text-box">Jeee</div>
+        </div>
+        <img class="obrazek" src="hide.png" alt="" />
+        <script>
+            const platno = document.querySelector(".platno")
+            const tlacitkoCtverce = document.querySelector("#tlacitkoCtverce")
+            const tlacitkoKolecka = document.querySelector("#tlacitkoKolecka")
+            const tlacitkoText = document.querySelector("#tlacitkoText")
+            const obrazek = document.querySelector(".obrazek")
+            const wrapper = document.querySelector(".wrappper")
+            let obsah = document.querySelector("#obsah")
+            let text = document.getElementById("text-box")
+
+
+            tlacitkoCtverce.addEventListener("click",kresliCtverec)
+            tlacitkoKolecka.addEventListener("click",kresliKolecko)
+            tlacitkoText.addEventListener("click",kresliText)
+            obrazek.addEventListener("click", zmiz)
+
+            function zmiz() {
+
+            }
+
+            function kresliCtverec()
+                for (let i = 0; i < 5; i++) {
+
+                let novyCtverec = document.createElement("div")
+                novyCtverec.classList.add("ctverec")
+                platno.appendChild(novyCtverec)
+
+            }
+
+            function kresliKolecko() {}
+
+            function kresliText() {
+                for(let i = 0; i <= 5; i++)
+                obsah.appendChild(text)
+            }
+        </script>
+    </body>
+</html>
