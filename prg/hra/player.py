@@ -34,7 +34,7 @@ class Player(pygame.sprite.Sprite):
         self.image = get_image(self.spritesheet, int(self.index), direction, 15, 16, 3)
 
         
-    def update(self):
+    def update(self, screen):
         dx = 0
         dy = 0
 
@@ -86,9 +86,15 @@ class Player(pygame.sprite.Sprite):
                 self.lives -= 1
                 self.invul = True
                 self.invul_time = 0
+        
+        # if self.lives == 0:
+        #     screen.fill((0, 0, 0))
 
         if self.invul_time > 2000:
             self.invul = False
+        
+        
+            
 
         if pygame.sprite.spritecollide(self, self.coins_group, True):
             self.score += 1

@@ -77,24 +77,34 @@ while True:
         level.draw_background()
 
         # renderování našeho fontu - pomocí fontu vytvoříme text, antialiasing a barvu
-        text = font.render(f"Lives: {player.sprite.lives}", False, "#000000")
+        text_lives = font.render(f"Lives: {player.sprite.lives}", False, "#000000")
+        text_score = font.render(f"Score: {player.sprite.score}", False, "#000000")
+        text_win = font.render(f"LEVEL COMPLETE", False, "#FF0000")
+        text_gameover = font.render(f"GAME OVER", False, "#FF0000")
 
         # text vypíšeme do obrazovky
-        screen.blit(text, (700, 10))
+        screen.blit(text_lives, (1150, 10))
+        screen.blit(text_score, (1050, 10))
 
         monsters.update()
-        player.update()
+        player.update(screen)
         
         player.sprite.invul_time += clock.get_time()
 
         all_sprites.draw(screen)
 
+        if len(coin_group.sprites()) == 0:
+            screen.fill("#0F5132")
+            screen.blit(text_win, (620, 350))
 
 
-        if lives <= 0:
+        if player.sprite.lives <= 0:
             game_over = True
     else:
         screen.fill((0, 0, 0))
+        screen.blit(text_gameover, (600, 350))
+
+
 
     # updatuje vše
     pygame.display.update()
